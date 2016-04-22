@@ -19,11 +19,6 @@ const jade = new Jade({
 });
 
 app.use(function *(next) {
-  this.body = this.request.body;
-  yield next;
-});
-
-app.use(function *(next) {
   this.set('Access-Control-Allow-Origin', '*');
   this.set('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
   this.set('Access-Control-Allow-Headers', 'Content-Type');
